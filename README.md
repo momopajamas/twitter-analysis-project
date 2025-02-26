@@ -40,7 +40,16 @@ We will start with a simple baseline model as an initial performance check befor
 After establishing a baseline, we will then move on to testing out more complex models.
 
 ## Data Preparation
+In preparing the data, we carry out the following:
+1. Dropping `emotion_in_tweet_is_directed_at` column
+2. Dropping null values
+3. Cleaning the Target values by dropping **I can't tell**
+4. Collapsing **Neutral** and **Negative** values under Target column together as **Note Positive** and making these values binary (0=Not Positive, 1=Positive)
+5. Splitting the data into training, validation, and testing sets
 
+We create a custom transformer, `TextPreprocessor()`, which preprocessed our text data by lowercasing it, removing special characters, tokenizing the text, removing standard stop words, and lemmatizing the text.
+
+We compile a list of **custom stop words** that includes both standard English stop words in addition to terms we identify as having low significance in the context of social media, such as 'rt' and 'u'.
 
 # Modeling
 
