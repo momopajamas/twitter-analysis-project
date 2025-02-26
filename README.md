@@ -89,11 +89,34 @@ While we have a better idea at how the models compare to each other, let's see w
 What this can lead us to conclude is that, despite the limitations and constraints we faced, we were able to successfully get our models to learn the relative significance of certain terms in the context of social media and Twitter.
 
 # Conclusion
+Despite constraints that were out of our control, which we will elaborate on below, we were able to successfully run models of varying rates of efficacy that processed texts from tweets and social media and used the insight to classify tweets as Positive or Not Positive. As outlined above, our emphasis was on Precision, which is essentially a measure of how good our models were at keeping Not Positive sentiments out of the Positive category, which we achieved.
+
+Overall, we built models that were adept at **correctly identifying Positive sentiments while keeping out Not Positive sentiments.**
+
+However, the weakness of our models comes in **allowing too many Positive sentiments to fall through the cracks and be misclassified as Not Positive.**
 
 ## Limitations
+We faced three main limitations.
 
-## Recommendations
+**The first concerns our dataset itself.** Though 9,000 tweets is a decent number, we would need more if we wanted to build a truly robust binary classification model, as the robustness of the model is correlated to the amount of data available to train on. Furthermore, despite our best attempts at reconciling the class imbalance, we faced very limited success, and the best remedy for this issue is a larger dataset with more Positive cases to train on. 
 
-## Next Steps
+In relation to the dataset itself, seeing as it was from 2013 (12 years ago as of the time of this writing), having a more updated dataset with recent tweets would assist us, not only because of changes to Twitter regulations as far as character limits, but also in terms of evolutions in slang and language used regularly on the internet generally, which any model trained on such an old dataset would find difficulty in processing.
+
+**Second, we faced severe limitations in terms of hardware,** which had a negative impact on our ability to run appropriate models. Ideally we would have been able to run heavier models, such as deep learning or neural networks, that would have been optimal for this endeavor were it not for the inability for these models to run on our current equipment. In particular, we would have benefited immensely from utilizing the BERTweet (Bidirectional Encoder Representations from Transformers), a Deep Learning model which is well-suited for analyzing tweets in particular as it is trained on 850 million English tweets and can process special characters such as emojies, hashtags, etc., and is capable of determining contextual meaning from limited text as tweets had a limit of 140 characters back in 2013, which is when our dataset was compiled.
+
+**The third limitation is closely related to the second in terms of time constraints.** Not only would better hardware allow us to run better models that are more efficient and sophisticated, but with more time we could have fleshed out different types of models and been able to experiment more effectively with strategies aimed at operationalizing features, etc.
+
+
+## Recommendations & Next Steps
+In order to build on these findings, we have three main recommended next steps:
+
+1. Gather an updated and more recent dataset that is 50-100% larger than our current dataset to allow for more effective model training that could be applied and updated for future use.
+2. Ensure that the new dataset is more well-balanced so that we can train our models to more effectively classify Positive sentiments.
+3. Invest in superior hardware so that we can make use of more efficient and more sophisticated models that are better-suited for the task of sentiment analysis and classification specifically for social media and Twitter, namely BERTweet or other deep learning models.
 
 # Appendix 
+### Navigation
+- [Dataset from data.world](https://data.world/crowdflower/brands-and-product-emotions)
+- [Presentation](https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/Presentation.pdf)
+- [Visualizations](https://github.com/momopajamas/twitter-analysis-project/tree/535cc3a3015f647d6f3ee5490a8b261d52858eb8/images)
+- [Jupyter Notebook](https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/notebook.ipynb)
