@@ -72,10 +72,10 @@ Across all the iterations of the various models we ran, we identified three fina
 
 ## Visualizations
 ### Evaluating Performance
-(https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/images/model_heatmap.png?raw=true)
+![Heatmap](https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/images/model_heatmap.png?raw=true)
 Let's look at it from another perspective.
 
-(https://github.com/momopajamas/twitter-analysis-project/blob/main/images/model_group_barchart.png?raw=true)
+![Barchart](https://github.com/momopajamas/twitter-analysis-project/blob/main/images/model_group_barchart.png?raw=true)
 What this tells us is the following, in terms of evaluating the strengths and weaknesses of our models:
 1. The final RFC model is the most balanced model, with BaselineMNB the most unbalanced.
 2. All of the models struggle to varying degrees with capturing all Positive cases, with many Positives falling through the cracks, indicating that despite our efforts to account for the class imbalance our models still failed to fully absorb Positive cases in their training.
@@ -85,7 +85,7 @@ What this tells us is the following, in terms of evaluating the strengths and we
 
 While we have a better idea at how the models compare to each other, let's see what our findings can tell us about Feature Importances, or which words were calculated to have significance in determining whether a tweet was Positive or Not Positive.
 
-(https://github.com/momopajamas/twitter-analysis-project/blob/main/images/top_5_features.png?raw=true)
+![Top5Words](https://github.com/momopajamas/twitter-analysis-project/blob/main/images/top_5_features.png?raw=true)
 What this can lead us to conclude is that, despite the limitations and constraints we faced, we were able to successfully get our models to learn the relative significance of certain terms in the context of social media and Twitter.
 
 # Conclusion
