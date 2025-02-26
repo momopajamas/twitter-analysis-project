@@ -15,7 +15,9 @@ As this problem is about analyzing and categorizing sentiments expressed through
 We will engage in NLP to build a binary classifier that is capable of differentiating between 'Positive' and 'Negative' or 'Neutral' sentiments.
 
 ## Dataset
-For these purposes, we will use a [dataset from data.world](https://data.world/crowdflower/brands-and-product-emotions) which contains more than 9,000 tweets expressing Positive, Negative, or Neutral sentiments towards Apple or Google products.
+For these purposes, we will use a [dataset from data.world]([https://data.world/crowdflower/brands-and-product-emotions](https://query.data.world/s/3vev4hczg4chzcbakhhqaprmp663dg?dws=00000) which contains more than 9,000 tweets expressing Positive, Negative, or Neutral sentiments towards Apple or Google products.
+
+**Note**: Accessing this dataset may require signing in, otherwise the link may take you to a 404 error.
 
 This dataset contains information across three columns:
 1. `tweets_text`, containing the text of the collected tweets. This will serve as our **Features** or X variable in modeling, and will use this column to generate **TF-IDF scores**, which assigns numeric values for key terms by weighing their frequency within a certain text against their frequency across different texts. This will help our model in gaining signals from significant words and reduce noise from frequent, insignificant words. These will be our features, at least in the initial baseline model.
@@ -116,7 +118,7 @@ In order to build on these findings, we have three main recommended next steps:
 
 # Appendix 
 ### Navigation
-- [Dataset from data.world](https://data.world/crowdflower/brands-and-product-emotions)
+- [Dataset from data.world]([https://data.world/crowdflower/brands-and-product-emotions](https://query.data.world/s/3vev4hczg4chzcbakhhqaprmp663dg?dws=00000) **Note** Accessing dataset may require sign in, otherwise the link may take you to a 404 error.
 - [Presentation](https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/Presentation.pdf)
 - [Visualizations](https://github.com/momopajamas/twitter-analysis-project/tree/535cc3a3015f647d6f3ee5490a8b261d52858eb8/images)
 - [Jupyter Notebook](https://github.com/momopajamas/twitter-analysis-project/blob/535cc3a3015f647d6f3ee5490a8b261d52858eb8/notebook.ipynb)
