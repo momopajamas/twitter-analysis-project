@@ -52,6 +52,25 @@ We create a custom transformer, `TextPreprocessor()`, which preprocessed our tex
 We compile a list of **custom stop words** that includes both standard English stop words in addition to terms we identify as having low significance in the context of social media, such as 'rt' and 'u'.
 
 # Modeling
+We prepare initial Pipelines to use with our baseline model, and create a function `store_results()` that stores the models and results for our work so we can easily access the results and compare later.
+
+After running initial MultinomialNB and and LogisticRegression models with modest results, we attempt hypertuning the parameters to see if we can produce better success metrics. We saw meager progress in this avenue, so we brought in a couple more models to experiment with, namely **LightGBM** and **RandomForestClassifier**.
+
+Still struggling to produce sufficient progress in terms of success metrics, we attempt to enhance our models by integrating **Feature Engineering** such as:
+- TF-IDF Vectorization
+- Bigrams and Trigrams
+- Word Embeddings
+
+We create another transformer, `FeatureEngineer()`, which essentially carries out the previous preprocessing tasks in addition to the feature engineering techniques described.
+
+Despite best efforts, we were unable to entirely surmount the obstacle of class imbalance we described earlier, with our models either performing well in terms of Precision but very poorly in terms of Recall and F1, or performing average across all three.
+
+Across all the iterations of the various models we ran, we identified three final models to use on our test data:
+1. **Baseline MultinomialNB**, which had the highest Precision score but scored poorly in Recall and F1
+2. **Logistic Regression, Tuned and Enhanced**, which was slightly more balanced than the Baseline but still skewed in favor of Precision
+3. **Random Forest Classifier, Tuned and Enhanced**, which though it did not excel at any single metric, was by far the most balanced among all three metrics
+
+## Visualizations
 
 # Conclusion
 
